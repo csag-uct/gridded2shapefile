@@ -5,11 +5,6 @@ import xray
 import sys
 import argparse
 
-import matplotlib.pyplot as plt
-from mpl_toolkits.basemap import Basemap
-from matplotlib.collections import PatchCollection
-from descartes import PolygonPatch
-
 import gridfunctions
 
 shpfile = fiona.open(sys.argv[1])
