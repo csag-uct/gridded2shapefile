@@ -17,6 +17,14 @@ in the shapefile schema: tasmax_t1, taxmin_t1, tasmax_t2, tasmin_t2, ... tasmax_
 The values of the properties are the sum of the product of the grid weights for the feature geometry and the gridded values for each timestep.
 This produces an area weighted mean for each target geometry.
 
+## Dependencies
+Requires:
+
+* fiona
+* xray
+* shapely
+* numpy
+
 ## Future development?
 An option should be added construct timeseries statistics rather than a full time series so that property values could represent the 
 time mean or such like derivatives.  At this point it more pragmatic to calculate these in gridded form (CDO or equivalent) and then
