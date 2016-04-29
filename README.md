@@ -1,12 +1,14 @@
 # gridded2shapefile
 Code to convert gridded data (netCDF) to a shapefile
 
-This code takes as arguments a template shapefile and a netcdf gridded data file (CF compliant).  For each feature in the
+Usage: python gridded2shapefile source.shp data.nc output.shp
+
+This code takes as arguments a template shapefile (source.shp) and a netcdf gridded data file (data.nc CF compliant).  For each feature in the
 template shapefile a set of normalized weights on the netcdf spatial grid is produced that represent the fractional overlap of the 
 feature geometry and each grid cell (grid coordinates are assumed to be grid centers so grid cells are constructed around the
 grid centers.  The weights are normalized so sum to 1.
 
-A new shapefile is written out that contains all the same features and properties as the template shapefile but also includes
+A new shapefile (output.shp) is written out that contains all the same features and properties as the template shapefile but also includes
 a new property per variable and timestep in the source netcdf file.  The property names are constructed like this:
 
 [variablename]_t[timestep+1]
