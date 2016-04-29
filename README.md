@@ -32,4 +32,6 @@ An option should be added construct timeseries statistics rather than a full tim
 time mean or such like derivatives.  At this point it more pragmatic to calculate these in gridded form (CDO or equivalent) and then
 map into shapefile geometries using gridded2shapefile
 
+Lots more error checking and support of more generic code is important.  Also, need to check what happens with different CRS!?
+
 
